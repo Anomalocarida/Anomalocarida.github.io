@@ -1,247 +1,116 @@
-* {
+/* General Styles */
+body {
+    font-family: 'Orbitron', sans-serif;
+    color: #f0f0f0;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
     margin: 0;
     padding: 0;
-    font-family: 'Courier New';
-    overflow-wrap: break-word;
-    color:white;
-}
-
-body {
-    background-image: url("images/storm.png"); /* Replace with your image path */
-    background-attachment: fixed;
-    background-size: cover; /* Ensure the image covers the entire area */
-    background-repeat: no-repeat; /* Avoid repeating the image */
-    background-position: center; /* Center the image */
-}
-
-.page {
-    /*width: 100vw;*/
-    height: 80vh;
-    font-size: 14px;
-    
-    text-align:justify;
-}
-
-.page>p {
-    width:100%;
-}
-
-nav ul li {
-    display: inline;
-}
-
-#buttoncontainer {
-    display: inline-block;
-    /*position:absolute;*/
-    background-color: rgba(50, 50, 50, 0.7);
-    width: 100%;
-    height: 300px;
-    padding-top: 20px;
-
-    image-rendering: pixelated;
-    border-image-source: url('images/border.png'); /* Path to your image */
-    border-image-slice: 7; 
-    border-image-repeat: stretch; /* Stretches the edges */
-    border-image-width: 40px;
-}
-
-.text {
-    transition: border-image-width 0.3s ease;
-    background-color: rgba(50, 50, 50, 0.7);
-    
-    padding-top: 20px;
-    image-rendering: pixelated;
-    border-image-source: url('images/border.png'); /* Path to your image */
-    border-image-slice: 7; /*the amount of pixels to slice the image in each side*/
-    border-image-repeat: stretch; /* Stretches the edges */
-    border-image-width: 20px; /* width of border */
-    width:100%;
-}
-
-.centeredText   
-{
-    text-align:center;
-}
-.text > p, .text>h3, .text>h1 {
-    padding-left: 3%;
-    padding-right: 3%;
-}
-
-.text > h1, .text > h3, .text > h2 {
     text-align: center;
 }
 
-.text:hover {
-    /*background-color: rgba(80, 80, 80, 0.7);*/
-    border-image-width: 30px;
+header {
+    background: #0f3460;
+    color: #e94560;
+    padding: 2rem;
 }
 
-.textimagepair {
-    display:flex;
-    flex-wrap:wrap;
+nav {
+    margin: 1rem 0;
 }
 
-button {
-    transition: border 0.1s linear;
-    display: inline-block;
-    /*    left: 50%;
-    top: 50%;*/
-    width: 70%;
-    height: 60px;
-    left: 15%;
-    background-color: rgb(80, 80, 80);
-    z-index: 1;
-    font-size: 18px;
-    border: 2px solid rgb(200, 200, 200);
+.nav-btn {
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    color: #f0f0f0;
+    background: #e94560;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-button:hover {
-    border: 8px solid rgb(200, 200, 200);
+/* Active button styles */
+.nav-btn.active {
+    background: #f0f0f0;
+    color: #0f3460;
+    font-weight: bold;
+    border: 2px solid #e94560;
+    transition: background 0.3s, color 0.3s;
 }
 
-button:active {
-    background-color: rgb(120, 120, 120);
+.nav-btn:hover {
+    background: #16213e;
 }
 
-#page1btn, #page2btn, #page3btn, #pagesbtn {
-    
-    position: absolute;
-    
+main {
+    padding: 1rem;
 }
 
-
-
-.topic {
-    position: absolute;
-    text-align: center;
-    margin-top: 150px;
-    width: 100%;
+/* Home page sections */
+#aboutMe, #aboutMyWork {
+    margin: 2rem auto;
+    max-width: 80%;
+    text-align: justify;
 }
 
-
-
-.enlarged {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(2);
-    z-index: 1001;
-    overflow:visible;
+#aboutMe h2, #aboutMyWork h2 {
+    color: #e94560;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
-#titleimg {
-    width: 100%;
-    height: 100px;
-    object-fit: contain; /* Maintain aspect ratio */
-    top: 0;
-    left: 0;
-    margin-bottom:25px;
+/* Game and Website Projects Section */
+.hidden {
+    display: none;
 }
 
-.contentimg {
-    
-    width: 30vw;
-    max-height: 30vh;
-    object-fit: contain; 
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: rgba(1, 1, 1, 0);
-    
-}
-
-.imgwrapper {
+/* Gallery Styles */
+.gallery {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem auto;
+    max-width: 80%;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #1a1a2e;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item iframe {
+    width: 400px;
+    height: 225px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.gallery-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e94560;
+    text-align: center;
     width: 100%;
-    position: relative;
-    /*background-color:black;*/
 }
 
-.contentvid {
-    width: 45vw;
-    max-height: 50vh;
-    aspect-ratio: 16 / 9;
-    object-fit: contain;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: rgba(1, 1, 1, 0);
+.gallery-item p {
+    margin-top: 0.5rem;
+    text-align: justify;
+    color: #f0f0f0;
 }
 
-.raingame {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    width:100%;
-}
-
-.raingame > .displayholder {
-    display:flex;
-    justify-content:center;
-    width:100%;
-}
-
-.raingame > .displayholder > .display {
-    background-color:lightskyblue;
-    width: min(50vw, 50vh);
-    height: min(50vw, 50vh);
-    position:relative;
-    overflow:hidden;
-}
-
-.raingame > .displayholder > .display > img {
-    height: 100%;
-    width: 100%;
-    top: 41%;
-    left: -35%;
-    transform: scale(0.2);
-    position: absolute;
-}
-
-.raindrop {
-    background-color:gray;
-    width:2%;
-    height:2%;
-    position:absolute;
-    display:none;
-}
-
-.raingame > .buttonholder {
-    display:flex;
-    justify-content:center;
-    width:50%;
-    height: 5vh;
-    padding-top:10%;
-}
-.raingame > .buttonholder > button {
-    width:75%;
-}
-
-@media screen and (min-width: 801px) 
-{
-    .page{
-        font-size:20px;
-    }
-    .textimagepair>.text {
-        width:50%;
-    }
-    .textimagepair > .imgwrapper {
-        width: 50%;
-        float:left;
-    }
-
-    .raingame > .displayholder {
-        display: flex;
-        justify-content: center;
-        width: 50%;
-    }
-
-    .raingame > .buttonholder {
-        display: flex;
-        justify-content: center;
-        width: 20%;
-        height: 5vh;
-        padding-top: 10%;
-    }
-
+footer {
+    margin-top: 2rem;
+    background: #0f3460;
+    color: #f0f0f0;
+    padding: 1rem;
 }
