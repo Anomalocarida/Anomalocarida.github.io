@@ -1,244 +1,99 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-
 </head>
-
 <body>
-    <div id="overlay"></div>
     <header>
-        <div class="imgwrapper">
-            <img id="titleimg" src="images/Rain.png" alt="title">
-        </div>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <button class="nav-btn" id="homeToggle">Home</button>
+            <button class="nav-btn" id="gameToggle">Game Projects</button>
+            <button class="nav-btn" id="websiteToggle">Website Projects</button>
+        </nav>
     </header>
 
-    <div id="buttoncontainer">
-        <nav>
-            <!--menu systtm-->
-            <ul class="btnTbl">
-                <li><button class="menubutton" id="page1btn">Games</button></li>
-                <li><button class="menubutton" id="page2btn">Websites</button></li>
-            </ul>
-            <button id="pagesbtn"> Pages ⮟ </button>
-        </nav>
-        <h1 class="topic">Games</h1>
-        <h1 class="topic">Websites</h1>
-    </div>
-    
-    <div id="pagecontainer">
-        <div class="page" id="page1">
+    <main>
+        <!-- Home page content -->
+        <div id="homePage">
+            <section id="aboutMe">
+                <h2>About Me</h2>
+                <p>Hello! I am a passionate game development and technology student with a strong interest in creating engaging and innovative interactive experiences. I thrive on the challenges of designing and developing games, from crafting immersive environments and compelling mechanics to optimizing performance and delivering polished gameplay. With a solid foundation in both the technical and creative aspects of game development, I am dedicated to exploring new technologies, mastering programming languages, and continuously honing my skills to contribute to the evolving world of gaming.</p>
+            </section>
 
-            <br>
-            <div class="text">
-                <h2>OpenGL (C++)</h2>
-                <br>
-                <p class="centeredText">
-                    List of projects made in OpenGL, coded in C++.
-                </p>
-                <br>
-                <br>
-            </div>
-
-            <br>
-
-            <!-- 2D BULLET HELL --><!-- 2D BULLET HELL --><!-- 2D BULLET HELL -->
-            <div class="textimagepair">
-                <div class="text">
-                    <h3>2D Bullet Hell</h3>
-                    <p>
-                        A 2D Bullet Hell game where you have to dodge bullets and shoot the orange circle to increase your score. The goal is to get the highest score you can without losing all your lives.
-                    </p>
-                    <br>
-                    <br>
-                </div>
-                <div class="imgwrapper">
-                    <iframe class="contentvid"
-                            src="https://www.youtube.com/embed/vFEVVCgKU3w"
-                            title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-            <!-- 2D BULLET HELL --><!-- 2D BULLET HELL --><!-- 2D BULLET HELL -->
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
-            <!-- 2D ACTION PLATFORMER --><!-- 2D ACTION PLATFORMER --><!-- 2D ACTION PLATFORMER -->
-            <div class="textimagepair">
-                <div class="text">
-                    <h3>2D Action Platformer</h3>
-                    <p>A 2D action playformer where your goal is to traverse the level while shooting enemies that get in your way to reach the boss and kill it.</p>
-                    <br>
-                    <br>
-                </div>
-
-                <div class="imgwrapper">
-                    <iframe class="contentvid"
-                            src="https://www.youtube.com/embed/a3c4wx9XAR4"
-                            title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-            <!-- 2D ACTION PLATFORMER --><!-- 2D ACTION PLATFORMER --><!-- 2D ACTION PLATFORMER -->
-
-
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
-            <!-- 3D HORROR GAME --><!-- 3D HORROR GAME --><!-- 3D HORROR GAME -->
-            <div class="textimagepair">
-                <div class="text">
-                    <h3>3D Horror Game</h3>
-                    <p>A 3D Horror Game where your goal is to find three keys around a building to unlock the gate allowing you to escape. There is a monster stalking you. You can use your flashlight to repel it.</p>
-                    <br>
-                    <br>
-                </div>
-
-                <div class="imgwrapper">
-                    <iframe class="contentvid"
-                            src="https://www.youtube.com/embed/faDCrMCf6So"
-                            title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-            <!-- 3D HORROR GAME --><!-- 3D HORROR GAME --><!-- 3D HORROR GAME -->
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
-            <!-- 3D SURVIVAL GAME (TEAM PROJECT) --><!-- 3D SURVIVAL GAME (TEAM PROJECT) --><!-- 3D SURVIVAL GAME (TEAM PROJECT) -->
-            <div class="textimagepair">
-                <div class="text">
-                    <h3>3D Survival Game (Team Project)</h3>
-                    <p>A 3D Survival Game where you have to find and traverse buildings to obtain food and water in order to survive.</p>
-                    <br>
-                    <p>This is a team project where i mainly worked on the procedural generation of the terrain and buildings in the desert, as well as the procedural generation of the interior layout of buildings. I also worked on optimizing the rendering of the terrain in order to create smooth gameplay with little performance issues.</p>
-                    <br>
-                </div>
-
-                <div class="imgwrapper">
-                    <iframe class="contentvid"
-                            src="https://www.youtube.com/embed/z23Z-FI5QWA"
-                            title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-            <!-- 3D SURVIVAL GAME (TEAM PROJECT) --><!-- 3D SURVIVAL GAME (TEAM PROJECT) --><!-- 3D SURVIVAL GAME (TEAM PROJECT) -->
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
-            <!-- UNITY ENGINE -->
-            <div class="text">
-                <h2>Unity Engine</h2>
-                <br>
-                <p class="centeredText">Projects made with Unity Engine, coded in C#</p>
-                <br>
-                <br>
-            </div>
-
-            <br>
-            <br>
-            <div class="textimagepair">
-                <div class="text">
-                    <h3>2D Game (Team Project)</h3>
-                    <p>A 2D Game about saving the oceans where you take on multiple quests to help clean the sea and save sea creatures.</p>
-                    <br>
-                    <p>This is a team project where i mainly worked on the first two quests, as well as environmental effects to polish the game such as, parallax background, waves, sounds, as well as the water getting darker as you swim deeper in the ocean.</p>
-                    <br>
-                </div>
-
-                <div class="imgwrapper">
-                    <iframe class="contentvid"
-                            src="https://www.youtube.com/embed/QMaAy65uquM"
-                            title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-
+            <section id="aboutMyWork">
+                <h2>About My Work</h2>
+                <p>I work on a variety of projects, ranging from 3D games to interactive websites. I'm always experimenting with new technologies and improving my skills in both the gaming and web development fields. Check out my work below:</p>
+            </section>
         </div>
 
-        <!-- WEBSITES PAGE --><!-- WEBSITES PAGE --><!-- WEBSITES PAGE -->
-        <div class="page" id="page2">
-            <br>
-            <div class="text">
-                <h2>Description</h2>
-                <br>
-                <p class="centeredText">
-                    Websites I have made.
-                </p>
-                <br>
-                <br>
-            </div>
-            <br>
+        <!-- Game Projects Section -->
+        <div class="hidden" id="gameProjects">
+            <h2>Game Projects</h2>
+            
+            <!-- OpenGL (C++) Projects -->
+            <section id="openGLProjects">
+                <h3>OpenGL (C++) Projects</h3>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <iframe src="https://www.youtube.com/embed/vFEVVCgKU3w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h3>2D Bullet Hell Game</h3>
+                        <p>Experience the fast-paced, heart-racing action of a 2D Bullet Hell game, where your reflexes and precision are put to the ultimate test. Dodge an onslaught of bullets while focusing on the orange circle, your primary target to boost your score. With each successful hit, your score climbs, but the stakes get higher as the intensity increases. The goal? Rack up the highest score possible while avoiding enemy fire and preserving your lives. Featuring chaotic bullet patterns, tight controls, and a thrilling challenge, this game is perfect for players who love precision, quick thinking, and nonstop action.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <iframe src="https://www.youtube.com/embed/a3c4wx9XAR4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h3>2D Platformer Shooter Game</h3>
+                        <p>Immerse yourself in an adrenaline-pumping 2D action platformer where agility and precision are your greatest allies. As the hero, your mission is to traverse perilous levels teeming with danger, using your wits and weaponry to overcome a relentless wave of enemies. Navigate intricate platforming challenges, uncover hidden paths, and collect power-ups to enhance your abilities. The ultimate goal? Face off against a formidable boss in an epic showdown that will test your skills to the limit. With fast-paced combat, engaging level design, and a captivating retro aesthetic, this game delivers an exhilarating experience for players seeking action-packed thrills and satisfying victories.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <iframe src="https://www.youtube.com/embed/faDCrMCf6So" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h3>3D Horror Game</h3>
+                        <p>Step into the chilling world of a 3D horror experience where survival hinges on your courage and cunning. Trapped inside a dark and foreboding building, your only chance of escape is to locate three hidden keys to unlock the gate to freedom. But you re not alone. A relentless and terrifying monster stalks your every move, forcing you to stay vigilant and strategic. Armed with just a flashlight, you can temporarily repel the creature, buying precious seconds to search for the keys and plan your next move. With eerie atmospherics, tense gameplay, and heart-pounding encounters, this game delivers a gripping survival horror adventure that keeps you on the edge of your seat until the very end.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <iframe src="https://www.youtube.com/embed/z23Z-FI5QWA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h3>3D Survival Game</h3>
+                        <p>In this collaborative project, my primary focus was on procedural generation and optimization to enhance both gameplay and performance. I developed the system responsible for procedurally generating the terrain and desert buildings, creating a dynamic and immersive environment. Additionally, I implemented procedural generation for the interior layouts of buildings, ensuring varied and engaging exploration experiences for players. To support smooth gameplay, I worked on optimizing the terrain rendering, significantly reducing performance bottlenecks and delivering a seamless and visually appealing experience.</p>
+                </div>
+            </section>
 
-            <div class="text">
-                <h2>Facts about rain</h2>
-                <br>
-                <p>An informative website I made to give viewers facts about rain, as well as providing multiple interactive simulation to give viewers an idea on how rain forms.</p>
-                <br>
-                <h3>Link</h3>
-                <br>
-                <a href="https://anomalocarida.github.io/webdeva2/" target="_blank"><p class="centeredText">https://anomalocarida.github.io/webdeva2/</p></a> 
-                <br>
-                <br>
-            </div>
-
-            <br>
-            <br>
-
-            <div class="text">
-                <h2>My Portfolio Website</h2>
-                <br>
-                <p class="centeredText">The website you are currently on.</p>
-                <br>
-                <br>
-            </div>
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            <!-- Unity Engine Projects -->
+            <section id="unityProjects">
+                <h3>Unity Engine Projects</h3>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <iframe src="https://www.youtube.com/embed/QMaAy65uquM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h3>2D GAME</h3>
+                        <p>In this 2D game centered around ocean conservation, players embark on multiple quests aimed at cleaning the sea and saving marine life. As part of a collaborative team effort, I contributed significantly to the design and development of the first two quests, laying the groundwork for the game's narrative and environmental goals. Additionally, I worked on enhancing the game's atmosphere by implementing environmental effects, including a dynamic parallax background to create a sense of depth, realistic wave animations, and immersive sound design to bring the underwater world to life. I also developed the mechanic where the water darkens as players swim deeper, intensifying the experience and adding a layer of immersion.</p>
+                    </div>
+                </div>
+            </section>
         </div>
-        
-    </div>
+
+        <!-- Website Projects Section -->
+        <div class="hidden" id="websiteProjects">
+            <h2>Website Projects</h2>
+            <p>
+                This portfolio website serves as a showcase of my work in web development. 
+                It is crafted using HTML, CSS, and JavaScript, and highlights my skills in creating interactive and responsive designs.
+            </p>
+            <p>
+                Check out the live portfolio here:
+                <a href="https://anomalocarida.github.io/webdeva2/" target="_blank" class="portfolio-link">
+                    Explore My Portfolio
+                </a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
